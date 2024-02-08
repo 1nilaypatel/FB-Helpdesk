@@ -1,7 +1,18 @@
-import React from 'react'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Conversations, FbIntegrations, Home, LogIn, SignUp } from './pages';
 
 export default function App() {
   return (
-    <div className='text-gray-500'>App</div>
+    <div>
+      <Router>
+        <Routes>
+          <Route path={"/"} element={<Home/>} />
+          <Route path={"/log-in"} element={<LogIn/>} />
+          <Route path={"/sign-up"} element={<SignUp/>} /> 
+          <Route path={"/fb-integrations"} element={<FbIntegrations/>} /> 
+          <Route path={"/conversations"} element={<Conversations/>} /> 
+        </Routes>
+      </Router>
+    </div>
   )
 }
