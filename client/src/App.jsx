@@ -1,10 +1,12 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Appbar } from './components';
 import { Conversations, FbIntegrations, Home, LogIn, SignUp } from './pages';
 
 export default function App() {
   return (
     <div>
       <Router>
+        <Appbar/>
         <Routes>
           <Route path={"/"} element={<Home/>} />
           <Route path={"/log-in"} element={<LogIn/>} />
